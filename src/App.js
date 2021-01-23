@@ -1,5 +1,6 @@
 import './App.css';
 import { useState, useEffect } from "react"
+import styled from 'styled-components';
 import Background from './component/ReactBackground';
 
 function App() {
@@ -49,13 +50,15 @@ const Timer = () => {
     setMin(newMin)
     setTxt(newTxt)
   }
+  const TimeStyle = styled.button`display:block;margin:auto`
   return (
     <div>
-      <button onClick={plus}>+</button>
+      <TimeStyle onClick={plus}>+</TimeStyle>
       <h1>{min} {txt}</h1>
-      <button onClick={minus}>-</button>
-      <button onClick={reset}>reset</button>
+      <TimeStyle onClick={minus}>-</TimeStyle>
+      <TimeStyle onClick={reset}>reset</TimeStyle>
     </div>
   )
 }
 export default App;
+
